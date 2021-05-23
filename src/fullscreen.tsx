@@ -6,6 +6,8 @@ import {
   ImageProps,
 } from '../index.d'
 
+import { default as MaterialImage } from "material-ui-image"
+
 import './fullscreen.css'
 
 // For touch devices, we don't want to listen to click events but rather touchstart.
@@ -326,10 +328,10 @@ export function Image({ src, alt, style, ...props }: ImageProps) {
         tabIndex={isFocused || !isImageGroupExpanded ? 0 : -1}
       >
         <div className="fullscreen-image">
-          <img src={src} alt={alt} style={style} />
+          <MaterialImage src={src} alt={alt} style={style} />
         </div>
         <div ref={scalingImage} className="fullscreen-image">
-          <img src={src} alt={alt} style={style} />
+          <MaterialImage src={src} alt={alt} style={style} />
         </div>
       </button>
     </div>
